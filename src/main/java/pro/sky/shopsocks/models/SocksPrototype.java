@@ -1,9 +1,9 @@
-package models;
+package pro.sky.shopsocks.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import models.enums.SizeSocks;
+import pro.sky.shopsocks.models.enums.SizeSocks;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;

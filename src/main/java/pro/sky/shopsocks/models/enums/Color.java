@@ -1,4 +1,4 @@
-package models.enums;
+package pro.sky.shopsocks.models.enums;
 
 public enum Color {
     WHITE("Белые"),BLACK("Черные"),GREY("Серые"),RED("Красные"),BROWN("Коричневые");

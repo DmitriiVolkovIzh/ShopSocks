@@ -1,6 +1,6 @@
-package services;
+package pro.sky.shopsocks.services;
 
-import models.Operaction;
+import pro.sky.shopsocks.models.Operaction;
 
 import java.io.File;
 

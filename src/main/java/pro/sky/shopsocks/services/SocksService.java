@@ -1,8 +1,6 @@
-package services;
+package pro.sky.shopsocks.services;
 
-import models.Socks;
-import models.enums.Color;
-
+import pro.sky.shopsocks.models.Socks;
 
 
 public interface SocksService {

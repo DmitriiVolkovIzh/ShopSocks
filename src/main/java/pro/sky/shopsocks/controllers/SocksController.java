@@ -1,15 +1,14 @@
-package controllers;
+package pro.sky.shopsocks.controllers;
 
-import exception.InvalidValueException;
-import exception.NotEnoughSocksException;
+import pro.sky.shopsocks.exception.InvalidValueException;
+import pro.sky.shopsocks.exception.NotEnoughSocksException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import models.Socks;
-import models.enums.Color;
+import pro.sky.shopsocks.models.Socks;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.SocksService;
+import pro.sky.shopsocks.services.SocksService;
 
 @RestController
 @RequestMapping("/socks")

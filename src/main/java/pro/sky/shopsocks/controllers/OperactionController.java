@@ -1,4 +1,4 @@
-package controllers;
+package pro.sky.shopsocks.controllers;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.InputStreamResource;
@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import services.FileService;
-import services.OperactionService;
+import pro.sky.shopsocks.services.FileService;
+import pro.sky.shopsocks.services.OperactionService;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +26,7 @@ public class OperactionController {
     private final FileService operactionFileService;
 
 
-    public OperactionController(OperactionService operactionService,@Qualifier("operationsFileServiceImpl") FileService operactionFileService) {
+    public OperactionController(OperactionService operactionService,@Qualifier("operactionFileServiceImpl") FileService operactionFileService) {
         this.operactionService = operactionService;
         this.operactionFileService = operactionFileService;
     }

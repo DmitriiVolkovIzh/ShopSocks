@@ -1,0 +1,56 @@
+[
+  {
+    "socks": {
+      "color": "WHITE",
+      "reallySize": 39.0,
+      "composition": 100
+    },
+    "sizeSocks": "M",
+    "quantity": 0
+  },
+  {
+    "socks": {
+      "color": "GREEN",
+      "reallySize": 36.0,
+      "composition": 100
+    },
+    "sizeSocks": "XS",
+    "quantity": 3
+  },
+  {
+    "socks": {
+      "color": "WHITE",
+      "reallySize": 45.0,
+      "composition": 90
+    },
+    "sizeSocks": "XL",
+    "quantity": 0
+  },
+  {
+    "socks": {
+      "color": "GREEN",
+      "reallySize": 44.0,
+      "composition": 100
+    },
+    "sizeSocks": "XL",
+    "quantity": 5
+  },
+  {
+    "socks": {
+      "color": "GREEN",
+      "reallySize": 38.0,
+      "composition": 100
+    },
+    "sizeSocks": "S",
+    "quantity": 5
+  },
+  {
+    "socks": {
+      "color": "WHITE",
+      "reallySize": 38.0,
+      "composition": 100
+    },
+    "sizeSocks": "S",
+    "quantity": 10
+  }
+]

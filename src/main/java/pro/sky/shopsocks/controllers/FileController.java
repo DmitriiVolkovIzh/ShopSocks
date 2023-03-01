@@ -1,4 +1,4 @@
-package controllers;
+package pro.sky.shopsocks.controllers;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import services.FileService;
+import pro.sky.shopsocks.services.FileService;
 
 import java.io.*;
 
@@ -19,11 +19,11 @@ import java.io.*;
 public class FileController {
 
     public final FileService fileService;
-    private final FileService operactionsFileService;
+    private final FileService operactionService;
 
-    public FileController(@Qualifier("socksFileServiceImpl") FileService fileService, @Qualifier("operactionsFileServiceImpl") FileService operactionsFileService) {
+    public FileController(@Qualifier("fileServiceImpl") FileService fileService, @Qualifier("operactionFileServiceImpl") FileService operactionService) {
         this.fileService = fileService;
-        this.operactionsFileService = operactionsFileService;
+        this.operactionService = operactionService;
     }
 
     private InputStreamResource getInputStreamFromFileOfService(File file) throws FileNotFoundException {
@@ -43,10 +43,10 @@ public class FileController {
     public ResponseEntity<InputStreamResource> downLoadOperationsDataFIle() throws FileNotFoundException {
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .contentLength(operactionsFileService.getDataFile().length())
+                .contentLength(operactionService.getDataFile().length())
                 .header(HttpHeaders.CONTENT_DISPOSITION,
                         "attachment; filename=\"Operations.json\"")
-                .body(getInputStreamFromFileOfService(operactionsFileService.getDataFile()));
+                .body(getInputStreamFromFileOfService(operactionService.getDataFile()));
     }
 
     private boolean cleanDataFile(MultipartFile multipartFile, FileService fileService) {

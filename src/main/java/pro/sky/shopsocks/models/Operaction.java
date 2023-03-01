@@ -1,4 +1,4 @@
-package models;
+package pro.sky.shopsocks.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

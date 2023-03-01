@@ -1,14 +1,14 @@
-package services.impl;
+package pro.sky.shopsocks.services.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import models.Operaction;
-import models.Socks;
+import pro.sky.shopsocks.models.Operaction;
+import pro.sky.shopsocks.models.Socks;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import services.FileService;
-import services.OperactionService;
+import pro.sky.shopsocks.services.OperactionService;
+import pro.sky.shopsocks.services.FileService;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
@@ -27,8 +27,8 @@ public class OperactionServiceImpl implements OperactionService {
     private final FileService operactionFileService;
 
 
-    public OperactionServiceImpl(@Qualifier("operactionServiceImpl") FileService operactionFileService) {
-        this.operactions = new ArrayList<Operaction>();
+    public OperactionServiceImpl(@Qualifier("operactionFileServiceImpl") FileService operactionFileService) {
+        this.operactions = new ArrayList<>();
         this.operactionFileService = operactionFileService;
     }
 

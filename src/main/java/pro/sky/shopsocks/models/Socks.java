@@ -1,10 +1,9 @@
-package models;
+package pro.sky.shopsocks.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import models.enums.Color;
+import pro.sky.shopsocks.models.enums.Color;
 
 
 import javax.validation.constraints.*;

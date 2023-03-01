@@ -1,4 +1,4 @@
-package exception;
+package pro.sky.shopsocks.exception;
 
 public class NotEnoughSocksException extends RuntimeException{
     public NotEnoughSocksException() {

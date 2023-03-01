@@ -1,4 +1,4 @@
-package models.enums;
+package pro.sky.shopsocks.models.enums;
 
 public enum SizeSocks {
     XS(new double[]{35.0, 35.5, 36.0, 36.5}),

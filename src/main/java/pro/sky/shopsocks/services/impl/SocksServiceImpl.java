@@ -1,19 +1,19 @@
-package services.impl;
+package pro.sky.shopsocks.services.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exception.InvalidValueException;
-import exception.NotEnoughSocksException;
-import models.Operaction;
-import models.Socks;
-import models.SocksPrototype;
-import models.enums.SizeSocks;
+import pro.sky.shopsocks.exception.InvalidValueException;
+import pro.sky.shopsocks.exception.NotEnoughSocksException;
+import pro.sky.shopsocks.models.Operaction;
+import pro.sky.shopsocks.models.Socks;
+import pro.sky.shopsocks.models.SocksPrototype;
+import pro.sky.shopsocks.models.enums.SizeSocks;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import services.FileService;
-import services.OperactionService;
-import services.SocksService;
+import pro.sky.shopsocks.services.FileService;
+import pro.sky.shopsocks.services.OperactionService;
+import pro.sky.shopsocks.services.SocksService;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
@@ -28,7 +28,7 @@ public class SocksServiceImpl implements SocksService {
 
     private final OperactionService operactionService;
 
-    public SocksServiceImpl(@Qualifier("socksFileServiceImpl")
+    public SocksServiceImpl(@Qualifier("fileServiceImpl")
                             FileService fileService, OperactionService operactionService) {
         this.store = new ArrayList<>();
         this.fileService = fileService;
