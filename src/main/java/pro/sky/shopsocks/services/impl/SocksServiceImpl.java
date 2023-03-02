@@ -80,7 +80,7 @@ public class SocksServiceImpl implements SocksService {
             throw new InvalidValueException();
         }
         for (SocksPrototype socksPrototype : store) {
-            if (socksPrototype.getSocks().getReallySize() == size && socksPrototype.getSocks().getColor().equals(color.toUpperCase()) &&
+            if (socksPrototype.getSocks().getReallySize() == size && socksPrototype.getSocks().getColor().name().equalsIgnoreCase(color) &&
                     socksPrototype.getSocks().getComposition() == composition) {
                 return socksPrototype.getQuantity();
             }

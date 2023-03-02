@@ -19,7 +19,7 @@ public enum SizeSocks {
     public static SizeSocks checkFitToSize(double reallySize) {
         SizeSocks sizeSocks = null;
         for (SizeSocks socksSizes : SizeSocks.values()) {
-            for (Double size : sizeSocks.getSize()) {
+            for (Double size : socksSizes.getSize()) {
                 if (reallySize == size) {
                     sizeSocks = socksSizes;
                     break;
